@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Device Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>WiFi Device Tracker</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>MAC ID</th>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Average Count</th>
+                <th>Average RSSI</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mac_id, data in devices.items() %}
+            <tr>
+                <td>{{ mac_id }}</td>
+                <td>{{ data['name'] }}</td>
+                <td>{{ data['roll_number'] }}</td>
+                <td>{{ data['average_count'] }}</td>
+                <td>{{ data['average_rssi'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Add New Device Registration</h2>
+    <form method="post" action="/register">
+        <label for="mac_id">MAC ID:</label>
+        <input type="text" id="mac_id" name="mac_id" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="roll_number">Roll Number:</label>
+        <input type="text" id="roll_number" name="roll_number" required><br><br>
+        <input type="submit" value="Register Device">
+    </form>
+</body>
+</html>
