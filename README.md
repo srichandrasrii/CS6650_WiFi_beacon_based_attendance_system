@@ -67,8 +67,9 @@ There are many things to be configured in the raspberry pi. I will break it down
 [Resource to understand using 'screen'](https://linuxize.com/post/how-to-use-linux-screen)
 
 <h3> Laptop and mobile devices </h3>
-The laptop is mostly used to setup the RPI, connect via SSH and run the python scripts. But the laptop and also other mobile devices can open the webserver by joining the same network which the RPI is connected to and go to the website http://192.168.x.x:5000 where (192.168.x.x) is the ip address of the RPI and '5000' is the port used in connection. </br></br>
+The laptop is mostly used to setup the RPI, connect via SSH and run the python scripts. But the laptop and also other mobile devices can open the webserver by joining the same network which the RPI is connected to and go to http://192.168.x.x:5000 where (192.168.x.x) is the ip address of the RPI and '5000' is the port used in connection. </br></br>
 
 This way you can see the registered data on the website from any device as long as you are connected to the same network as RPI. To see the updated statistics, you need to refresh the page. To add a new registration, fill the form and click submit, the data will be added to the csv file and will be shown on the website.
 On the website you can see the entries of different registered people including their names, Roll number, average_count, average_RSSI, status (present/absent).
 
+Note: A copy of logged data can be found in ./CS6650/data_log.txt (Its about 11MB in size).
