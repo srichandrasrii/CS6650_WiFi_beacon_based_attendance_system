@@ -3,6 +3,7 @@
 <head>
     <title>WiFi Device Tracker</title>
     <style>
+        /* CSS styles for the page layout and elements */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -56,28 +57,31 @@
     <h1>WiFi Device Tracker</h1>
     <table>
         <thead>
+            <!-- Table header row -->
             <tr>
-                <th>MAC ID</th>
                 <th>Name</th>
                 <th>Roll Number</th>
                 <th>Average Count</th>
                 <th>Average RSSI</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
             {% for mac_id, data in devices.items() %}
+            <!-- Loop through devices and populate table rows -->
             <tr>
-                <td>{{ mac_id }}</td>
                 <td>{{ data['name'] }}</td>
                 <td>{{ data['roll_number'] }}</td>
                 <td>{{ data['average_count'] }}</td>
                 <td>{{ data['average_rssi'] }}</td>
+                <td>{{ data['status'] or 'Absent'}}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     <h2>Add New Device Registration</h2>
     <form method="post" action="/register">
+        <!-- Form for device registration -->
         <label for="mac_id">MAC ID:</label>
         <input type="text" id="mac_id" name="mac_id" required><br><br>
         <label for="name">Name:</label>
