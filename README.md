@@ -49,7 +49,7 @@ There are many things to be configured in the raspberry pi. I will break it down
 
 3. Installing all necessary packages: We are using flask as our web server which is being hosted locally. So make sure that flask is installed on the RPI. Also make sure if Pyserial, csv packages are installed on the RPI. Also I have used `screen` to run multiple programs at once on the RPI. So you need to make sure 'screen' is also installed as well.
 
-4. Changes in code: Don't forget to change the `api_url` in ```main.py``` and `host` in 
+4. Changes in code: Don't forget to change the `api_url` in ```main.py``` and `host` in `app.py`
     
         app.run(host='192.168.151.148', port=5000, debug=True)``` 
     
