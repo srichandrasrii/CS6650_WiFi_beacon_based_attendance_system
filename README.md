@@ -1,6 +1,12 @@
 # CS6650_WiFi_frames_based_attendance_system
 This is our final project submission for Professor Ayon Chakraborty's course on sensing systems of IoT.
 
+Team :
+1. Srichandra Siripuram (EE20B128) - main author
+2. Siddhanth Ramani (CS23Z007) - main author
+3. HarshaVardhan Pothula (CS19B036)
+4. Venkatesh Amboth (CS19B006)
+
 We have built a semi-automated way to mark attendance using WiFi frames emitted from students’ smartphones. 
 Our solution leverages the proliferation of smartphones in universities and the use of WiFi technology, to mark students’ attendance automatically.
 
